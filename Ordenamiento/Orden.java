@@ -37,8 +37,61 @@ public void insercion100(int arreglo1[]){
         }
 
     }
+}
 
+public void insercion1000(int arreglo2[]){
+
+    int temp=0;
+
+    int i=0,j=0;
+
+    for(i=0;i<1000;i++){
+        temp=arreglo2[i];
+        j=i;
     
+        for( ;j > 0;j--){
+
+            if(temp>arreglo2[j-1]){
+                arreglo2[j]=arreglo2[j-1];
+                arreglo2[j-1]=temp;
+            }
+        }
+
+    }
+}
+
+public void insercion10000(int arreglo3[]){
+
+    int temp=0;
+
+    int i=0,j=0;
+
+    for(i=0;i<10000;i++){
+        temp=arreglo3[i];
+        j=i;
+    
+        for( ;j > 0;j--){
+
+            if(temp>arreglo3[j-1]){
+                arreglo3[j]=arreglo3[j-1];
+                arreglo3[j-1]=temp;
+            }
+        }
+
+    }
+}
+
+public void shellsort100(int arreglo1[]){
+
+int i=0,j=0,k=0,gap=0;
+
+for(gap=arreglo1.length/2;gap>0;gap=gap/2){
+//for(j=gap;j)
+
+
+}
+
+
 }
 
 public void mostrar100(int arreglo1[]){
