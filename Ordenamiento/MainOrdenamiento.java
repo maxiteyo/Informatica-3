@@ -30,12 +30,12 @@ public class MainOrdenamiento {
         
             case 1:
             System.out.println(("---ARREGLO DESORDENADO---"));
-            orden.mostrar100(arreglo1);
+            orden.mostrar1000(arreglo2);
             System.out.println();
             System.out.println();
             System.out.println("---ARREGLO ORDENADO---");
-            orden.insercion100(arreglo1);
-            orden.mostrar100(arreglo1);
+            orden.insercion1000(arreglo2);
+            orden.mostrar1000(arreglo2);
             break;
 
             case 2:
