@@ -39,7 +39,13 @@ public class MainOrdenamiento {
             break;
 
             case 2:
-
+            System.out.println(("---ARREGLO DESORDENADO---"));
+            orden.mostrar100(arreglo1);
+            System.out.println();
+            System.out.println();
+            System.out.println("---ARREGLO ORDENADO---");
+            orden.shellsort100(arreglo1);
+            orden.mostrar100(arreglo1);
             break;
 
             case 3:

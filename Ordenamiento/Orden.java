@@ -83,15 +83,50 @@ public void insercion10000(int arreglo3[]){
 
 public void shellsort100(int arreglo1[]){
 
-int i=0,j=0,k=0,gap=0;
+int i=0,j=0,gap=0,temp=0;
 
 for(gap=arreglo1.length/2;gap>0;gap=gap/2){
-//for(j=gap;j)
-
+    for(i=gap;i < arreglo1.length; i++){
+        for(j=i-gap; j>=0 && arreglo1[j] > arreglo1[j+gap];j=j-gap){
+            temp=arreglo1[j];
+            arreglo1[j]=arreglo1[j+gap];
+            arreglo1[j+gap]=temp;
+        }
+    }
 
 }
+}
 
+public void shellsort1000(int arreglo2[]){
 
+int i=0,j=0,gap=0,temp=0;
+
+for(gap=arreglo2.length/2;gap>0;gap=gap/2){
+    for(i=gap;i < arreglo2.length; i++){
+        for(j=i-gap; j>=0 && arreglo2[j] > arreglo2[j+gap];j=j-gap){
+            temp=arreglo2[j];
+            arreglo2[j]=arreglo2[j+gap];
+            arreglo2[j+gap]=temp;
+        }
+    }
+
+}
+}
+
+public void shellsort10000(int arreglo3[]){
+
+int i=0,j=0,gap=0,temp=0;
+
+for(gap=arreglo3.length/2;gap>0;gap=gap/2){
+    for(i=gap;i < arreglo3.length; i++){
+        for(j=i-gap; j>=0 && arreglo3[j] > arreglo3[j+gap];j=j-gap){
+            temp=arreglo3[j];
+            arreglo3[j]=arreglo3[j+gap];
+            arreglo3[j+gap]=temp;
+        }
+    }
+
+}
 }
 
 public void mostrar100(int arreglo1[]){
