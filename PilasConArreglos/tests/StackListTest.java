@@ -52,7 +52,32 @@ if(expr.isEmpty()==true){
 }
 
 
+}
 
+public void decimalToBinario(){
+
+int numero1=0;
+Scanner consola= new Scanner(System.in);
+System.out.println("Ingrese un numero: ");
+numero1=consola.nextInt();
+StackList<Integer> expr= new StackList<Integer>();
+int numero2=0;
+int resto=0;
+
+
+
+while(resto > 2){
+resto=numero1 % 2;
+numero1=numero1/2;
+expr.push(resto);
+}
+
+
+
+for(int i=0;i<expr.size();i++){
+System.out.println(expr.pop());
+}
 
 }
+
 }

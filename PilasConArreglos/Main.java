@@ -68,6 +68,9 @@ switch(opcion){
     case 3:
     stackTestList.parentesis();
     break;
+    case 4:
+    stackTestList.decimalToBinario();
+    break;
 }
 
 break;
