@@ -70,14 +70,14 @@ public NodoBinario<AnyType> findMax(NodoBinario<AnyType> t){
     return t;
 }
 
-/*public void insert(AnyType x) throws Exception{
+public void insert(AnyType x) throws Exception{
     root=insert(x,root);
-}*/
+}
 
 public NodoBinario<AnyType> insert( AnyType x,NodoBinario<AnyType> t) throws Exception{
     
     if(t == null){
-        t= new NodoBinario<AnyType>(x); //creo que no funciona
+        t= new NodoBinario<AnyType>(x);
     }else{
         if(((Integer) x).compareTo((Integer) t.data) < 0){
             t.left= insert(x,t.left);

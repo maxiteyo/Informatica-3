@@ -9,21 +9,18 @@ public class ArbolBinarioTest {
 public void numRandoms(){
 
 Random num= new Random();
-ArbolBin<Integer> arbol= new ArbolBin<Integer>(num.nextInt(26));//por que tengo que inicianizarlo asi?
+ArbolBin<Integer> arbol= new ArbolBin<Integer>();
 
 System.out.println("-------10 NUMEROS RANDOM EN ARBOL BINARIO-------");
 
-for(int i=0;i<11;i++){
+for(int i=0;i<10;i++){
     
     try {
-
-    arbol.insert(num.nextInt(26),arbol.getRoot());
-
+    arbol.insert(num.nextInt(26));
     } catch (Exception e) {
         // TODO: handle exception
     }
 }
-
 arbol.printInOrder();
 
 }
@@ -42,12 +39,13 @@ public void numOrd(){
     System.out.println("Ingrese el numero "+(i+1)+":");
     num=consola.nextInt();
     try {
-        arbol.insert(num,arbol.getRoot());
+        arbol.insert(num);
     } catch (Exception e) {
         // TODO: handle exception
     }
     }
 
+    System.out.println("-----Impresion en orden-----");
     arbol.printInOrder();
 
 
