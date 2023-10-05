@@ -58,11 +58,24 @@ public class NodoBinario<AnyType> {
 
     public static <AnyType>int height (NodoBinario<AnyType> t){
       if(t == null){
-        return -1;
+        return 0;
       }else{
         return 1 + Math.max(height(t.left),height(t.right));
       }
     }
+
+     public static <AnyType>int heightCasero (NodoBinario<AnyType> t){
+
+      if(t == null){
+        return 0;
+      }else{
+        if(heightCasero(t.left) > heightCasero(t.right)){
+          return 1 + heightCasero(t.left);
+        }else{
+          return 1 + heightCasero(t.right);
+        }
+      }
+     }
 
 
     public void printInOrder(){

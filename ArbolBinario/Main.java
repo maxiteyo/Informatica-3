@@ -26,17 +26,20 @@ opcion=consola.nextInt();
 switch(opcion){
 
     case 1:
-    test.numRandoms();
+    test.numRandoms();//si se repiten no los muestra a los dos
     break;
 
     case 2:
-    test.numOrd();
+    test.numOrd();//si se repiten no los muestra a los dos
     break;
 
     case 3:
+    System.out.println("El programa del ej no permite repetir numeros...");
+    test.Ej1NumRep();
     break;
 
     case 4:
+    test.Ej4Depth();
     break;
 
     case 5:

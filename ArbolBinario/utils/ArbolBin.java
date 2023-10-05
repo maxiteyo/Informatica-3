@@ -22,6 +22,10 @@ public int height(){
     return NodoBinario.height(root);
 }
 
+public int heightCasero(){
+    return NodoBinario.heightCasero(root);
+}
+
 public void printInOrder(){
     if(root != null){
         root.printInOrder();
@@ -80,6 +84,30 @@ public NodoBinario<AnyType> insert( AnyType x,NodoBinario<AnyType> t) throws Exc
         t= new NodoBinario<AnyType>(x);
     }else{
         if(((Integer) x).compareTo((Integer) t.data) < 0){
+            t.left= insert(x,t.left);
+        }else{
+            if(((Integer) x).compareTo((Integer) t.data) >= 0){
+                t.right= insert(x,t.right);
+            }else{
+                System.out.println("duplicado");
+                throw new Exception(x.toString());
+            }
+        }
+    }
+    return t;
+
+}
+
+public void insertRep(AnyType x) throws Exception{
+    root=insertRep(x,root);
+}
+
+public NodoBinario<AnyType> insertRep( AnyType x,NodoBinario<AnyType> t) throws Exception{
+
+    if(t == null){
+        t= new NodoBinario<AnyType>(x);
+    }else{
+        if(((Integer) x).compareTo((Integer) t.data) <= 0){//si es duplicado lo guardo en el brazo izquierdo
             t.left= insert(x,t.left);
         }else{
             if(((Integer) x).compareTo((Integer) t.data) > 0){
