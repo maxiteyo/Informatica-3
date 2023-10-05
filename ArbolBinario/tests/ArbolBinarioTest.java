@@ -92,6 +92,44 @@ public void Ej4Depth(){
 
 }
 
+public void BorrarElemento(){
+
+    int cant=0;
+    int num=0;
+    Scanner consola=new Scanner(System.in);
+     ArbolBin<Integer> arbol= new ArbolBin<Integer>();
+
+    System.out.println("Ingrese la cantidad de numeros que quiere agregar al arbol: ");
+    cant=consola.nextInt();
+    
+    for(int i=0;i<cant;i++){
+    System.out.println("Ingrese el numero "+(i+1)+":");
+    num=consola.nextInt();
+    try {
+        arbol.insert(num);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    }
+    System.out.println("---Arbol ordenado---");
+    arbol.printInOrder();
+    System.out.println("--------");
+
+    System.out.println("\nIngrese el valor que quiere borrar");
+    num=consola.nextInt();
+
+    try {
+        arbol.remove(num,arbol.getRoot());
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    System.out.println("----Arbol con el valor restado ordenado----");
+    arbol.printInOrder();
+    System.out.println("----------");
+
+}
+
 
 
 

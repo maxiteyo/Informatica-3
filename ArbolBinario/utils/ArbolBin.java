@@ -135,7 +135,7 @@ if(t == null){
 }
 }
 
-private NodoBinario<AnyType> remove(AnyType x,NodoBinario<AnyType> t) throws Exception{
+public NodoBinario<AnyType> remove(AnyType x,NodoBinario<AnyType> t) throws Exception{
 
     if(t == null){
         throw new Exception(x.toString());

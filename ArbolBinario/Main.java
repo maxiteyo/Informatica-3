@@ -43,6 +43,7 @@ switch(opcion){
     break;
 
     case 5:
+    test.BorrarElemento();
     break;
 
 
