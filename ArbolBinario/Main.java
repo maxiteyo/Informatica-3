@@ -30,6 +30,7 @@ switch(opcion){
     break;
 
     case 2:
+    test.numOrd();
     break;
 
     case 3:

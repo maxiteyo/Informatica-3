@@ -1,6 +1,5 @@
 package ArbolBinario.utils;
 
-import PilasConArreglos.utils.Nodo;
 
 public class ArbolBin<AnyType> {
     
