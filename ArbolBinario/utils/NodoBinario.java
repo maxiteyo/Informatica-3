@@ -6,10 +6,22 @@ public class NodoBinario<AnyType> {
     NodoBinario<AnyType> left;
     NodoBinario<AnyType> right;
 
+    public NodoBinario(){
+      this.data=null;
+      this.left=null;
+      this.right=null;
+    }
+
+    public NodoBinario(AnyType x){
+      this.data=x;
+      this.right=null;
+      this.left=null;
+    }
+
     public NodoBinario(AnyType data,NodoBinario<AnyType> left,NodoBinario<AnyType> right) {
       this.data = data;
-      this.left = null;
-      this.right = null;
+      this.left = left;
+      this.right = right;
     }
 
     public AnyType getData() {

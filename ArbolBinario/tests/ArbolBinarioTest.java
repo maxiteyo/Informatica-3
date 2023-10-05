@@ -8,13 +8,22 @@ public class ArbolBinarioTest {
 public void numRandoms(){
 
 Random num= new Random();
-ArbolBin<Integer> arbol= new ArbolBin<Integer>(num.nextInt(26));
+ArbolBin<Integer> arbol= new ArbolBin<Integer>(num.nextInt(26));//por que tengo que inicianizarlo asi?
 
-for(int i=0;i<25;i++){
+System.out.println("-------10 NUMEROS RANDOM EN ARBOL BINARIO-------");
 
-    arbol.merge(num.nexInt(26),arbol.left,arbol.right);
+for(int i=0;i<11;i++){
+    
+    try {
 
+    arbol.insert(num.nextInt(26),arbol.getRoot());
+
+    } catch (Exception e) {
+        // TODO: handle exception
+    }
 }
+
+arbol.printInOrder();
 
 }
 
