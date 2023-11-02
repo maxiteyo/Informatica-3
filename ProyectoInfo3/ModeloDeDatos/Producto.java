@@ -1,13 +1,34 @@
 package ProyectoInfo3.ModeloDeDatos;
 
 public class Producto {
-    public String nombre;
-    public int stock;
-    public int codigo;
-    public float precio;
 
-public Producto(){
-}
+    public Producto() {
+    }
+
+    private String nombre;
+    private int stock;
+    private int codigo;
+    private float precio;
+    private boolean isNew;
+
+    
+
+public Producto(String nombre, int stock, int codigo, float precio, boolean isNew) {
+        this.nombre = nombre;
+        this.stock = stock;
+        this.codigo = codigo;
+        this.precio = precio;
+        this.isNew = isNew;
+    }
+
+public boolean isNew() {
+        return isNew;
+    }
+
+    public void setNew(boolean isNew) {
+        this.isNew = isNew;
+    }
+
 
 public String getNombre() {
     return nombre;

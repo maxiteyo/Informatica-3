@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import PilasConArreglos.utils.StackList;
 
-public class StackListTest {
+public class StackListTest2 {
     
 public void pilaDePalabras(){
 

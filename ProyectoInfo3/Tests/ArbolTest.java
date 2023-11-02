@@ -6,36 +6,19 @@ import java.util.Scanner;
 
 public class ArbolTest {
     
-    public void agregar(ArbolAVL arbol,int contador){
+    public void agregarArbol(ArbolAVL arbol,Producto producto){
     
-    Producto producto= new Producto();
-    Scanner consola= new Scanner(System.in);
-    
-    producto.codigo=contador;
-    System.out.print("Ingrese nombre del producto a agregar: ");
-    producto.nombre=consola.nextLine();
-    System.out.print("Ingrese precio del producto: ");
-    producto.precio=consola.nextFloat();
-    System.out.print("Ingrese stock del producto: ");
-    producto.stock=consola.nextInt();
-
     arbol.add(producto);
     }
 
-    public void borrar(ArbolAVL arbol){
+    public void borrar(ArbolAVL arbol,String nombre){
 
-      Scanner consola= new Scanner(System.in);
-      String nombre;
-      
-      System.out.println("Ingrese el nombre del producto a borrar:");
-      nombre=consola.nextLine();
       try {
         arbol.delete(arbol.buscar(nombre));
       } catch (Exception e) {
           e.printStackTrace();
           return;
       }
-      System.out.println("El producto se borro con exito");
     }
 
     public void buscar(ArbolAVL arbol){
@@ -53,10 +36,10 @@ public class ArbolTest {
         return;
     }
     System.out.println("*******Producto*******");//hacer bonito la impresion del producto encontrado
-    System.out.println("Codigo: "+ producto.codigo);
-    System.out.println("Nombre: "+ producto.nombre);
-    System.out.println("Precio: $"+ producto.precio);
-    System.out.println("Stock: "+producto.stock);
+    System.out.println("Nombre: "+ producto.getNombre());
+    System.out.println("Codigo: "+ producto.getCodigo());
+    System.out.println("Precio: $"+ producto.getPrecio());
+    System.out.println("Stock: "+producto.getStock());
     System.out.println("**********************");
     }
 

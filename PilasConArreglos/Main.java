@@ -2,7 +2,7 @@ package PilasConArreglos;
 
 import java.util.Scanner;
 
-import PilasConArreglos.tests.StackListTest;
+import PilasConArreglos.tests.StackListTest2;
 import PilasConArreglos.tests.StackTest;
 
 public class Main {
@@ -46,7 +46,7 @@ case 1:
 break;
 
 case 2:
-StackListTest stackTestList = new StackListTest();
+StackListTest2 stackTestList = new StackListTest2();
 System.out.println(("---MENU 2---"));
 System.out.println("1- Implementacion Pila con lista(salteado)");
 System.out.println("2- Pila de palabras");
