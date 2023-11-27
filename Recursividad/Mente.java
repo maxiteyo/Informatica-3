@@ -60,16 +60,15 @@ return resultado;
 
 public int ej4(int n1){
 
-int resultado=0;
 
 if(n1==1){
     System.out.println(" "+n1);
     return 1;
 }
 System.out.print(" "+n1);
-resultado=ej4(n1-1);
+ej4(n1-1);
 
-return resultado;
+return 0;
 }
 
 public int ej5(int n1,int n2){
